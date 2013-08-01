@@ -1,0 +1,67 @@
+{
+  "name": "dilutedsearch",
+  "fullName": "Diluted Search",
+  "id": "jid1-FABkJdPuLfeWnw",
+  "description": "An add-on that dilutes/hides actual google searches by performing additional searches in the background using popular terms of different categories",
+  "author": "Zhongyi Jin <pipilu8@icloud.com>, Aaron Jow",
+  "license": "AGPL 3.0",
+  "version": "0.32",
+  "preferences": [
+    {
+    "name": "searchInterval",
+    "title": "Search Time Interval",
+    "description": "When triggered, this is the window that diluted-searches will be performed, in seconds",
+    "type": "integer",
+    "value": 300
+    },
+    {
+    "name": "numSearches",
+    "title": "Number of Diluted-Searches",
+    "description": "When triggered, this is the number of diluted-searches randomly distributed across the above time interval",
+    "type": "integer",
+    "value": 10
+    },
+    {
+    "description": "Generate diluted-searches using popular search terms gathered from Wikipedia",
+    "type": "bool",
+    "name": "PopularCategory",
+    "value": true,
+    "title": "Popular Category "
+    },
+    {
+    "description": "Generate diluted-searches using medical terms gathered from Wikipedia",
+    "type": "bool",
+    "name": "MedicineCategory",
+    "value": true,
+    "title": "Medicine Category"
+    },
+    {
+    "name": "pageWorkers",
+    "title": "Number of Search Buffers",
+    "description": "This is the number of buffers used for diluted-searches",
+    "type": "integer",
+    "value": 3
+    },
+    {
+    "name": "debugLevel",
+    "title": "Logging Level",
+    "description": "Adjust the logging level.  0=NONE, 1=ERROR, 2=WARNING, 3=INFO, 4=DEBUG",
+    "type": "integer",
+    "value": 0
+    },
+    {       
+    "name": "logActualSearch",
+    "title": "Log Actual Search",
+    "description": "Log actual searches",
+    "type": "bool",
+    "value": false
+    },
+    {
+    "description": "Show search history",
+    "type": "control",
+    "name": "ShowHistory",
+    "label": "Show history",
+    "title": "Show Diluted-Search History"
+    }
+  ]
+}

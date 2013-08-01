@@ -1,0 +1,63 @@
+Test Plan for DilutedSearch
+
+1. Run cfx run and start a NEW profile
+2. Verify that plugin download/creates the dictionaries
+3. Click on the "show history" button
+4. Change search interval time to 300 seconds, leave number of searches at 10
+
+SEARCHING FROM THE TOOLBAR
+5. Do 10 searches from search bar
+6. Verify that "Total Number of Actual Searches" is 10
+7. After 300 seconds, verify that "Total Number of Diluted Searches" is 100
+
+SEARCHING FROM GOOGLE MAIN SITE
+8. Go to www.google.com/search?complete=0
+9. Do a search on the main Google page
+10. Verify that Number of Actual Searches increments by 1
+11. Do a search on the search results page from step (10)
+12. Verify that the Number of Actual Searches increments by 1
+13. After the search interval time, verify that the number of diluted searches
+= number of actual searches * number of searches (from Preferences)
+14. Do the same as above in steps 8-13, except don't enter complete=0 into the
+URL manually
+
+SEARCHING FROM TOOLBAR, THEN FROM GOOGLE SITE DIRECTLY
+15. Do a search from the toolbar
+16. Verify that Number of Actual Searches increments by 1
+17. Do a search from the search results page
+18. Verify that Number of Actual Searches increments by 1
+19. Do another search from the search results page
+20. Verify that Number of Actual Searches increments by 1
+21. Repeat steps 18-19 a few times to make sure that it picks up the searches
+
+DISABLING/ENABLING THE PLUGIN
+22. Go to Preferences and hit Disable
+23. Verify that the Show History window closes
+24. Enable and verify that dictionaries are re-downloaded
+25. Click Show History again and verify that counters have been reset
+26. Do some searches from the toolbar or from the Google main site and verify
+that Number of Actual Searches increments by 1 each time, and that the number
+of diluted searches reaches number of searches * number of actual searches by
+the time the search interval elapses.
+
+SEARCH CATEGORIES
+27. Check ONLY the Popular category
+28. Do some searches
+29. After search interval elapses, make sure that all searches in the Show
+History page are in fact from the Popular category
+30. Check ONLY the Medicine category
+31. Do some searches
+32. After search interval elapses, make sure that all searches in the Show
+History page are in fact from the Medicine category
+33. Check MULTIPLE categories
+34. Do some searches
+35. After search interval elapses, make sure that all searches in the Show
+History page are in fact from those multiple categories
+
+PAGE LOADED IN PREVIOUS SESSION
+1. Load a Google search page
+2. Disable plugin
+3. Re-enable plugin
+4. Verify that, when searching from that page, the Number of Actual Searches
+increments
+
