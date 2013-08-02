@@ -1,24 +1,11 @@
 What is DilutedSearch?
 
-DilutedSearch is a plugin that automatically submits searches to a search
-engine ("diluted searches") whenever a real search is performed.  By
-performing many "dummy" searches for every real search, DilutedSearch makes
-it more difficult to identify which searches are real and which searches are
-automatically generated.
+DilutedSearch is a Firefox plugin that enhances the internet search privacy. It is well-known that search queries could be used to collect personal information such as habits, medical history, finances, sexual orientation, or political affiliation. DilutedSearch addresses this issue by interleaving automatically generated searches with real searches. By mixing many "dummy" searches with real searches, DilutedSearch makes it more difficult for the search engine to identify which searches are real and which searches are automatically generated. In other words, actual searches are diluted by "dummy" searches. The extension also disables click tracking, to prevent the search engine from knowing which links were clicked on.
 
 
 How does DilutedSearch work?
 
-The extension works by waiting for the user to search for something on a
-major search engine.  When a search occurs, the extension schedules a number
-of diluted searches (the exact number can be controlled by the user) at random
-points over a certain amount of time (also configurable by the user).  The
-search categories (from which the diluted searches are chosen) are also
-configurable by the user.
-
-The extension also disables click tracking, to prevent the search engine from
-knowing which searches were real by simply determining which links were clicked
-on.
+The plugin works by scheduling a number of "dummy" searches at random points over a certain amount of time. Additional "dummy" searches are added whenever a new real search is performed. The "dummy" searches are chosen based on contents from Wikipedia under different search categories. The search categories and many other settings are configurable by the user.   
 
 How do I use DilutedSearch?
 
