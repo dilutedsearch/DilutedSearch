@@ -1,4 +1,4 @@
-Test Plan for DilutedSearch
+Test Plan for DilutedSearch:
 
 1. Run cfx run and start a NEW profile
 2. Verify that plugin download/creates the dictionaries
