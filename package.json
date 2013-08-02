@@ -5,7 +5,7 @@
   "description": "An add-on that dilutes/hides actual google searches by performing additional searches in the background using popular terms of different categories",
   "author": "Zhongyi Jin <pipilu8@icloud.com>, Aaron Jow",
   "license": "AGPL 3.0",
-  "version": "0.32",
+  "version": "1.0",
   "preferences": [
     {
     "name": "searchInterval",
