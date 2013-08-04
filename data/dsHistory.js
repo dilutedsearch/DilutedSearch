@@ -18,9 +18,9 @@ DilutedSearch.  If not, see <http://www.gnu.org/licenses>.
 
 function updateStatistics(numActualSearches, numDilutedSearches, numScheduledSearches)
 {
-    document.getElementById("numDilutedSearches").innerHTML = numDilutedSearches;
-    document.getElementById("numActualSearches").innerHTML = numActualSearches;
-    document.getElementById("numScheduledSearches").innerHTML = numScheduledSearches;
+    document.getElementById("numDilutedSearches").textContent = numDilutedSearches;
+    document.getElementById("numActualSearches").textContent = numActualSearches;
+    document.getElementById("numScheduledSearches").textContent = numScheduledSearches;
 }
 
 function updateHistory(data)
@@ -38,8 +38,8 @@ function updateHistory(data)
         var row=table.insertRow(i+1);
         var date = new Date(data[i].time);
         row.insertCell(0).innerHTML = date.toString();
-        row.insertCell(1).innerHTML = data[i].query;
-        row.insertCell(2).innerHTML = data[i].type;
+        row.insertCell(1).textContent = data[i].query;
+        row.insertCell(2).textContent = data[i].type;
     }
 }
 
