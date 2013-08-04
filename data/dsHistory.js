@@ -18,6 +18,11 @@ DilutedSearch.  If not, see <http://www.gnu.org/licenses>.
 
 function updateStatistics(numActualSearches, numDilutedSearches, numScheduledSearches)
 {
+    if(numActualSearches == 0)
+    {
+        numActualSearches = "N/A";
+    }
+
     document.getElementById("numDilutedSearches").textContent = numDilutedSearches;
     document.getElementById("numActualSearches").textContent = numActualSearches;
     document.getElementById("numScheduledSearches").textContent = numScheduledSearches;
