@@ -37,7 +37,7 @@ function updateHistory(data)
     {
         var row=table.insertRow(i+1);
         var date = new Date(data[i].time);
-        row.insertCell(0).innerHTML = date.toString();
+        row.insertCell(0).textContent = date.toString();
         row.insertCell(1).textContent = data[i].query;
         row.insertCell(2).textContent = data[i].type;
     }
