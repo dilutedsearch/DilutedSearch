@@ -64,7 +64,7 @@ var KeywordsLoader = {
         /* Medicine */
         if (document.URL == 'https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Medicine/Popular_pages')
         {
-            keywordLinks = document.querySelectorAll("td > a[title]:first-child");
+            keywordLinks = document.querySelectorAll("div#mw-content-text td > a[title]:first-child");
             for (var i = 0; i < keywordLinks.length; ++i)
             {
                 keywords[i] = keywordLinks[i].textContent.toLowerCase();
@@ -77,7 +77,7 @@ var KeywordsLoader = {
         }
         else if(document.URL == 'https://en.wikipedia.org/wiki/List_of_World_Health_Organization_Essential_Medicines')
         {
-            keywordLinks = document.querySelectorAll("ul > li > a[title]:first-child");
+            keywordLinks = document.querySelectorAll("div#mw-content-text ul > li > a[title]:first-child");
             for (var i = 0; i < keywordLinks.length; ++i)
             {
                 keywords[i] = keywordLinks[i].textContent.toLowerCase();
@@ -90,7 +90,7 @@ var KeywordsLoader = {
         }
         else if(document.URL == 'https://en.wikipedia.org/wiki/List_of_bestselling_drugs')
         {
-            keywordLinks = document.querySelectorAll("tr > td:nth-child(2), tr > td:nth-child(3) > a[title]:first-child, tr > td:nth-child(7)");
+            keywordLinks = document.querySelectorAll("div#mw-content-text tr > td:nth-child(2), tr > td:nth-child(3) > a[title]:first-child, tr > td:nth-child(7)");
             for (var i = 0; i < keywordLinks.length; ++i)
             {
                 keywords[i] = keywordLinks[i].textContent.toLowerCase();
@@ -104,7 +104,7 @@ var KeywordsLoader = {
         /* Popular */
         else if (document.URL == 'https://en.wikipedia.org/wiki/User:West.andrew.g/Popular_pages')
         {
-            keywordLinks = document.querySelectorAll("td > a[title]:first-child");
+            keywordLinks = document.querySelectorAll("div#mw-content-text td > a[title]:first-child");
             for (var i = 1; i < keywordLinks.length; ++i)
             {
                 keywords.push(keywordLinks[i].textContent.toLowerCase());
@@ -117,7 +117,7 @@ var KeywordsLoader = {
         }
         else if (document.URL == 'https://en.wikipedia.org/wiki/Wikipedia:What_Google_liked')
         {
-            keywordLinks = document.querySelectorAll("div#mw-content-text > ul > li > a[title]:first-child");
+            keywordLinks = document.querySelectorAll("div#mw-content-text ul > li > a[title]:first-child");
             for (var i = 2; i < keywordLinks.length; ++i)
             {
                 keywords.push(keywordLinks[i].textContent.toLowerCase());
@@ -131,7 +131,7 @@ var KeywordsLoader = {
         else if(document.URL == 'https://en.wikipedia.org/wiki/Wikipedia:Top_10_Google_hits,_A-K' || 
                 document.URL == 'https://en.wikipedia.org/wiki/Wikipedia:Top_10_Google_hits,_L-Z')
         {
-            keywordLinks = document.querySelectorAll("ol > li > a[title]:first-child");
+            keywordLinks = document.querySelectorAll("div#mw-content-text ol > li > a[title]:first-child");
             for (var i = 0; i < keywordLinks.length; ++i)
             {
                 keywords[i] = keywordLinks[i].textContent.toLowerCase();
