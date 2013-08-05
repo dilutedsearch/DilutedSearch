@@ -28,9 +28,9 @@ var current_gs_debug_level = DEBUG_LEVEL.DEBUG;
 
 function gs_dblog(level, m)
 {
-    m = new Date().getTime() + " " + m;
     if (level <= current_gs_debug_level)
     {
+        m = new Date().getTime() + " " + m;
         if (level == DEBUG_LEVEL.NONE)
         {
             console.log("Shouldn't have ANY messages with debug level NONE");
