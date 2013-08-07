@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2013  ZhongYi Jin <pipilu8@icloud.com> and Aaron Jow
+Copyright (C) 2013  ZhongYi Jin <pipilu8@icloud.com> and Aaron Jow <awj223@yahoo.com>
 
 DilutedSearch is free software: you can redistribute it and/or modify it
 under the terms of the GNU Affero Public License as published by the Free
@@ -14,4 +14,4 @@ You should have received a copy of the GNU Affero Public License along with
 DilutedSearch.  If not, see <http://www.gnu.org/licenses>.
 */
 
-Please goto doc/main.md for help.
+**Please goto doc/main.md for help.**
