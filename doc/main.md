@@ -41,5 +41,6 @@ The configuration options are:
 * Categories: Check the box to perform diluted searches in the desired category.  If more than one box is checked, then the searches will be performed from all relevant categories.
 
 * Show History: Brings up a page showing search history, which includes number of searches, search terms (both for real and diluted searches), and searches scheduled in the future.
+![alt text](screenshots/History.png "Search History")
 
 * Disable/Enable button: This can be used to disable or enable the plugin.  Also, disabling and re-enabling the plugin will reset the search counter.
