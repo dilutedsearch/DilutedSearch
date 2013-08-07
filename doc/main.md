@@ -24,7 +24,11 @@ Currently, there are two categories: Popular and Medicine.  The Popular category
 
 ###What configuration options are available?
 
-The Preferences section can be reached by going to Tools->Add-ons->Extensions->Diluted Search->Preferences.  The configuration options are:
+The Preferences section can be reached by going to Tools->Add-ons->Extensions->Diluted Search->Preferences.  An example of the Preferences section is shown in
+the image below:
+![alt text](screenshots/PreferencesMenu.png "Preferences Menu")
+
+The configuration options are:
 
 * Page Workers: The Firefox plugin creates a number of "page workers", which are permanent, invisible pages.  These pages are used to perform the diluted searches, and they are used in a round-robin fashion to perform each successive search.  Unless you have a real reason to change this, it should be left at its default setting.
 
