@@ -14,4 +14,4 @@ You should have received a copy of the GNU Affero Public License along with
 DilutedSearch.  If not, see <http://www.gnu.org/licenses>.
 */
 
-**Please see the [main.md][doc/main.md] file for help.**
+**Please see the [main.md](doc/main.md) file for help.**
