@@ -42,5 +42,10 @@ The configuration options are:
 
 * Show History: Brings up a page showing search history, which includes number of searches, search terms (both for real and diluted searches), and searches scheduled in the future.
 ![alt text](screenshots/History.png "Search History")
+   Note that there are several sections to the Show History page:
+   * Total Number of Diluted Searches: The total number of "dummy" searches performed
+   * Total Number of Actual Searches: The number of times the user has done a real search through the search engine
+   * Total Number of Currently Scheduled Searches: The number of "dummy" searches scheduled, but not yet executed.  These searches are randomly distributed throughout the Search Time Interval when the user performs an Actual search.
+   * Diluted Search History: Shows the time, the term searched for, and the search type.  0 is an Actual search (not logged by default, unless the Log Actual Search button is checked), 1 is a "dummy" search scheduled along with an Actual search, and 2 is a "dummy" search scheduled spontaneously (to prevent the search engine from being able to identify a real search, after a long idle period, as the first search performed after said idle period).
 
 * Disable/Enable button: This can be used to disable or enable the plugin.  Also, disabling and re-enabling the plugin will reset the search counter.
