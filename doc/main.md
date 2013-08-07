@@ -30,17 +30,19 @@ the image below:
 
 The configuration options are:
 
-* Page Workers: The Firefox plugin creates a number of "page workers", which are permanent, invisible pages.  These pages are used to perform the diluted searches, and they are used in a round-robin fashion to perform each successive search.  Unless you have a real reason to change this, it should be left at its default setting.
-
-* Logging Level: Dynamic debugging level (for use by developers).  Levels available are 0 (NONE) through 4 (DEBUG).
-
 * Search Time Interval: When a real search is performed, the plugin schedules a certain number of diluted searches, randomly distruted over a specified time interval.  This is that time interval.
 
-* Number of Searches: This is the number of searches performed in the Search Time Interval, for each real search submitted.
+* Number of Diluted Searches: This is the number of searches performed in the Search Time Interval, for each real search submitted.
 
 * Categories: Check the box to perform diluted searches in the desired category.  If more than one box is checked, then the searches will be performed from all relevant categories.
 
-* Show History: Brings up a page showing search history, which includes number of searches, search terms (both for real and diluted searches), and searches scheduled in the future.
+* Number of Search Buffers: The Firefox plugin creates a number of "page workers", which are permanent, invisible pages.  These pages are used to perform the diluted searches, and they are used in a round-robin fashion to perform each successive search.  Unless you have a real reason to change this, it should be left at its default setting.
+
+* Logging Level: Dynamic debugging level (for use by developers).  Levels available are 0 (NONE) through 4 (DEBUG).
+
+* Log Actual Searches: If enabled, logs the contents of the Actual searches to the Show Diluted-Search History page.  If disabled (default), doesn't log the contents of Actual searches to the History page, but still logs how many Actual searches have been performed.
+
+* Show Diluted-Search History: Brings up a page showing search history, which includes number of searches, search terms (both for real and diluted searches), and searches scheduled in the future.
 ![alt text](screenshots/History.png "Search History")
    Note that there are several sections to the Show History page:
    * Total Number of Diluted Searches: The total number of "dummy" searches performed
