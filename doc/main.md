@@ -51,3 +51,8 @@ The configuration options are:
    * Diluted Search History: Shows the time, the term searched for, and the search type.  0 is an Actual search (not logged by default, unless the Log Actual Search button is checked), 1 is a "dummy" search scheduled along with an Actual search, and 2 is a "dummy" search scheduled spontaneously (to prevent the search engine from being able to identify a real search, after a long idle period, as the first search performed after said idle period).
 
 * Disable/Enable button: This can be used to disable or enable the plugin.  Also, disabling and re-enabling the plugin will reset the search counter.
+
+###How should I configure Google for searching?
+DilutedSearch automatically disables Google Instant to protect your privacy, however there is another way that your real searches can be revealed: if you click on the link to the second, third, etc, page of search results, this search can be identified as the real search.
+
+If you routinely use search results past the first page, then go to www.google.com/preferences and set the number of search results per page to something large enough that you don't need ever click on the second page of results.
