@@ -55,6 +55,7 @@ The configuration options are:
 
 ###What if I get a captcha because too many searches have been submitted in too short a period of time?
 ![alt text](screenshots/Captcha.png "Captcha")
+
 Ah yes, the dreaded captcha.  Search providers don't like it when automated software submits searches, so if you submit too many searches in too short a time period, they'll often force you to do a captcha like the one shown above to prove you are human.
 
 If you get these notifications often, it can give away which searches are real and which ones are not (the search that answers a captcha correctly is ALWAYS a real search).
