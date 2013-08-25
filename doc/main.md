@@ -52,6 +52,16 @@ The configuration options are:
 
 * Disable/Enable button: This can be used to disable or enable the plugin.  Also, disabling and re-enabling the plugin will reset the search counter.
 
+
+###What if I get a captcha because too many searches have been submitted in too short a period of time?
+![alt text](screenshots/Captcha.png "Captcha")
+Ah yes, the dreaded captcha.  Search providers don't like it when automated software submits searches, so if you submit too many searches in too short a time period, they'll often force you to do a captcha like the one shown above to prove you are human.
+
+If you get these notifications often, it can give away which searches are real and which ones are not (the search that answers a captcha correctly is ALWAYS a real search).
+
+While we believe that the default settings will not cause problems for most users in most cases, it is possible to reduce the number of diluted searches performed for each real search.  This should reduce the rate of searches being submitted below the threshold required to trigger the captcha.  To do this, go to the Diluted Search Preferences page (Tools->Add-Ons->Extensions->Diluted Search->Preferences), find the "Number of Diluted-Searches" box, and reduce the number of searches as desired.
+
+
 ###How should I configure Google for searching?
 DilutedSearch automatically disables Google Instant to protect your privacy, however there is another way that your real searches can be revealed: if you click on the link to the second, third, etc, page of search results, this search can be identified as the real search.
 
