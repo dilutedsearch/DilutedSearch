@@ -1,7 +1,7 @@
 /*
 This file is part of DilutedSearch.
 
-Copyright (C) 2013  ZhongYi Jin <pipilu8@icloud.com> and Aaron Jow
+Copyright (C) 2013 2014 ZhongYi Jin <pipilu8@icloud.com> and Aaron Jow
 
 DilutedSearch is free software: you can redistribute it and/or modify it
 under the terms of the GNU Affero Public License as published by the Free
@@ -42,9 +42,15 @@ function updateHistory(data)
     {
         var row = table.insertRow(i+1);
         var date = new Date(data[i].time);
-        row.insertCell(0).textContent = date.toString();
-        row.insertCell(1).textContent = data[i].query;
-        row.insertCell(2).textContent = data[i].type;
+        var typeName = ["Actual", "Random", "Random"]
+        var query = data[i].query;
+        if(data[i].type == 2)
+        {
+            query = "[DS: Triggered background random search]"
+        }
+        row.insertCell(0).textContent = date.toLocaleString();
+        row.insertCell(1).textContent = query;
+        row.insertCell(2).textContent = typeName[data[i].type];
     }
 }
 
