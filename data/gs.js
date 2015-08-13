@@ -57,7 +57,8 @@ function gs_dblog(level, m)
 var DilutedSearch = {
 
     mutationTimer: null,
-
+    lastEvent: {time: 0, msg: null},
+    
     /* main function */
     main: function(e)
     {
@@ -82,7 +83,8 @@ var DilutedSearch = {
             gs_dblog(DEBUG_LEVEL.ERROR, "checkSite: Error: context not the same?");
         }
 
-        var href = e.originalTarget.location.href;
+        //var href = e.originalTarget.location.href;
+        var href = e;
 
         if (!(/\.(js|css|xml|rss|pdf)$/.test(href)) && !(/complete\/search/.test(href)) && ( /^http[s]?:\/\/.*?\.(google|googleproxy)\.[a-z\.]+\//.test(href) || /^http:\/\/(64\.233\.161\.99|64\.233\.161\.104|64\.233\.161\.105|64\.233\.161\.147|64\.233\.167\.99|64\.233\.167\.104|64\.233\.167\.147|64\.233\.171\.99|64\.233\.171\.104|64\.233\.171\.105|64\.233\.171\.147|64\.233\.179\.99|64\.233\.179\.99|64\.233\.183\.99|64\.233\.183\.104|64\.233\.185\.99|64\.233\.185\.104|64\.233\.187\.99|64\.233\.187\.104|64\.233\.189\.104|66\.102\.7\.104|66\.102\.7\.105|66\.102\.7\.147|66\.102\.9\.104|66\.102\.11\.104|216\.239\.37\.104|216\.239\.37\.105|216\.239\.37\.147|216\.239\.39\.104|216\.239\.53\.104|216\.239\.57\.98|216\.239\.57\.104|216\.239\.57\.105|216\.239\.57\.147|216\.239\.59\.104|216\.239\.59\.105|216\.239\.63\.104|66\.249\.81\.99)\//.test(href)))
         {
@@ -110,6 +112,21 @@ var DilutedSearch = {
             search = e.target.value + search;
         }
         msg.search = search;
+
+	var lastEvent = DilutedSearch.lastEvent;
+	if(lastEvent.time != 0)
+	{
+	    if(lastEvent.msg.type == "keydown" && lastEvent.msg.keyCode == 13
+	       && msg.type == "change" && lastEvent.msg.search.trim() == msg.search)
+	    {
+		gs_dblog(DEBUG_LEVEL.INFO, "inputEventHandler: dropped duplicate event: " + JSON.stringify(e) + " " + e.type);
+		return;
+	    }
+	}
+	
+	DilutedSearch.lastEvent.time = new Date().getTime();
+	DilutedSearch.lastEvent.msg = msg;
+	
         self.port.emit("GSToMain", JSON.stringify(msg));
     },
 
@@ -342,5 +359,6 @@ function probeGoogle(e)
     }
 }
 
-document.addEventListener("DOMContentLoaded", DilutedSearch.main, false);
+//document.addEventListener("DOMContentLoaded", DilutedSearch.main, false);
+DilutedSearch.main(window.location.href);
 //document.addEventListener("mousedown", probeGoogle, false);

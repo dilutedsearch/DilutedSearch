@@ -46,7 +46,7 @@ function updateHistory(data)
         var query = data[i].query;
         if(data[i].type == 2)
         {
-            query = "[DS: Triggered background random search]"
+            query = "*"
         }
         row.insertCell(0).textContent = date.toLocaleString();
         row.insertCell(1).textContent = query;

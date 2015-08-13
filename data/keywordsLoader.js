@@ -64,7 +64,7 @@ var KeywordsLoader = {
         /* Medicine */
         if (document.URL == 'https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Medicine/Popular_pages')
         {
-            keywordLinks = document.querySelectorAll("div#mw-content-text td > a[title]:first-child");
+            keywordLinks = document.querySelectorAll("div#mw-content-text td:nth-child(2) > a[title]:first-child");
             for (var i = 0; i < keywordLinks.length; ++i)
             {
                 keywords[i] = keywordLinks[i].textContent.toLowerCase();

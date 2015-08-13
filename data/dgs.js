@@ -183,7 +183,8 @@ var DGS_DummySearch = {
                 {
                     DGS_DummySearch.dblog(DEBUG_LEVEL.DEBUG, "init: Triggered mutations: " + mutations.length);
                     DGS_DummySearch.dblog(DEBUG_LEVEL.DEBUG, "init: Current URL: " + document.URL);
-
+                    //DGS_DummySearch.dblog(DEBUG_LEVEL.DEBUG, "$$: " + document.documentElement.innerHTML);
+                    
                     if(DGS_DummySearch.doSubmit)
                     {
                         DGS_DummySearch.doSubmit = false;

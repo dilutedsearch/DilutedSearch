@@ -1,39 +1,55 @@
 {
   "name": "dilutedsearch",
+  "title": "Diluted Search",
   "fullName": "Diluted Search",
-  "id": "jid1-FABkJdPuLfeWnw",
+  "id": "jid1-FABkJdPuLfeWnw@jetpack",
   "description": "An add-on that dilutes/hides actual google searches by performing additional searches in the background using popular terms of different categories",
   "author": "Zhongyi Jin <pipilu8@icloud.com>, Aaron Jow",
   "license": "AGPL 3.0",
-  "version": "1.1",
+  "version": "2.0.0",
+  "main": "lib/main.js",
   "preferences": [
     {
     "name": "searchInterval",
     "title": "Search Time Interval",
-    "description": "When triggered, this is the window that diluted-searches will be performed, in seconds",
+    "description": "When triggered, this is the time window that diluted-searches will be performed, in seconds",
     "type": "integer",
     "value": 300
     },
     {
     "name": "numSearches",
-    "title": "Number of Diluted-Searches",
-    "description": "When triggered, this is the number of diluted-searches randomly distributed across the above time interval",
+    "title": "Number of Diluted-Searches Per Actual Google Search",
+    "description": "When triggered, this is the number of diluted-searches that will be created and randomly scheduled across the above time interval",
     "type": "integer",
     "value": 10
     },
     {
-    "description": "Generate diluted-searches using popular search terms gathered from Wikipedia",
-    "type": "bool",
-    "name": "PopularCategory",
-    "value": true,
-    "title": "Popular Category "
+    "name": "queueSize",
+    "title": "Diluated Search Queue Size",
+    "description": "Defines the maximum number of diluated-searches that can be queued in the future. If the queue is full, no new diluated-searches will be scheduled",
+    "type": "integer",
+    "value": 100
     },
     {
+    "name": "minSearchGap",
+    "title": "Minimal time delay between diluted-searches, in seconds",
+    "description": "This adds the minimal time delay between two consecutive diluted-searches. If set too small, Google may send out warnings since too many searches are carried out in a short period of time",
+    "type": "integer",
+    "value": 10
+    },
+    {
+    "name": "PopularCategory",
+    "title": "Popular Category",
+    "description": "Generate diluted-searches using popular search terms gathered from Wikipedia",
+    "type": "bool",
+    "value": true
+    },
+    {
+    "name": "MedicineCategory",
+    "title": "Medicine Category",
     "description": "Generate diluted-searches using medical terms gathered from Wikipedia",
     "type": "bool",
-    "name": "MedicineCategory",
-    "value": true,
-    "title": "Medicine Category"
+    "value": true
     },
     {
     "name": "pageWorkers",
@@ -55,6 +71,13 @@
     "description": "Log actual searches",
     "type": "bool",
     "value": false
+    },
+    {       
+    "name": "searchHistorySize",
+    "title": "Search History Size",
+    "description": "Max number of most recent searches to log",
+    "type": "integer",
+    "value": 1000
     },
     {
     "description": "Show search history",
