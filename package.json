@@ -25,8 +25,8 @@
     },
     {
     "name": "queueSize",
-    "title": "Diluated Search Queue Size",
-    "description": "Defines the maximum number of diluated-searches that can be queued in the future. If the queue is full, no new diluated-searches will be scheduled",
+    "title": "Diluted Search Queue Size",
+    "description": "Defines the maximum number of diluted-searches that can be queued in the future. If the queue is full, no new diluted-searches will be scheduled",
     "type": "integer",
     "value": 100
     },
