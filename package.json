@@ -1,12 +1,16 @@
 {
-  "name": "dilutedsearch",
   "title": "Diluted Search",
+  "name": "dilutedsearch",
   "fullName": "Diluted Search",
   "id": "jid1-FABkJdPuLfeWnw@jetpack",
   "description": "An add-on that dilutes/hides actual google searches by performing additional searches in the background using popular terms of different categories",
   "author": "Zhongyi Jin <pipilu8@icloud.com>, Aaron Jow",
   "license": "AGPL 3.0",
-  "version": "2.0.3",
+  "version": "2.0.4",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
   "main": "lib/main.js",
   "preferences": [
     {
